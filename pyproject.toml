@@ -1,0 +1,24 @@
+[project]
+name = "hostel-concierge"
+version = "0.1.0"
+description = "A multi-agent AI concierge system using LangGraph and MCP."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langgraph>=1.2.23",
+    "mcp[cli]>=2.3.0",
+    "pydantic>=2.14.4",
+    "pydantic-settings>=2.16.3",
+]
+
+[project.scripts]
+hostel-concierge = "hostel_concierge.main:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
